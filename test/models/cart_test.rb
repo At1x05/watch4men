@@ -28,7 +28,7 @@ class CartTest < MiniTest::Test
     cart = Cart.new
     cart.add_item 1
 
-    assert_equal cart.serialize, hash_for_session
+    assert_equal cart.serialize, hash_for_session["cart"]
   end
 
   def test_build_with_has
@@ -44,7 +44,7 @@ class CartTest < MiniTest::Test
             {"product_id" => 1, "quantity" => 1}
           
           ]
-        }
+        } 
       }
     end
 end
