@@ -1,0 +1,8 @@
+%h1= @product.name
+%p= number_to_currency(@product.price)
+%p= image_tag @product.image, class: 'avg-image'
+%p Średnia ocena to #{@product.mark}/10
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

@@ -1,0 +1,25 @@
+%h1 Listing products
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Name
+      %th Price
+      %th Image
+      %th Description
+
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= link_to product.name, product
+        %td= product.price
+        %td= image_tag product.image, class: 'min-image'
+        %td= product.description
+        %td
+          = link_to 'Edit', edit_product_path(product)
+          = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+%p= link_to 'Dodaj Produkt', new_product_path, class: 'btn btn-product'
