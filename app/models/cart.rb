@@ -48,6 +48,14 @@ class Cart
     }
   end
 
+  #Sum price for each products items (using total_price method from cart_item.rb)
+  def total_cart_price
+    @items.inject(0) do |sum, item| 
+      sum + item.total_price 
+    end
+  end
+    
+
 
 
   

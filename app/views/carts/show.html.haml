@@ -1,0 +1,22 @@
+%table.table.table-hover
+  %thead.bg-info
+    %tr
+      %th Produkt
+      %th Zdjęcie
+      %th Ilość
+      %th Cena (za sztukę)
+      %th Cena 
+
+  -@cart.items.each do |item|
+    %tr
+      %td=link_to item.find_product.name, item.find_product 
+      %td=image_tag item.find_product.image, class: 'thumb-image'
+      %td=item.quantity
+      %td=number_to_currency(item.find_product.price)
+      %td=number_to_currency(item.total_price)
+      %br
+
+%p.text-right
+  %strong= "Suma: #{number_to_currency(@cart.total_cart_price)}"
+
+//%p.text-right="Całkowita wartość Twoich zakupów wynosi: #{number_to_currency(@cart.total_cart_price)}"

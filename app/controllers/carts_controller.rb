@@ -6,4 +6,7 @@ class CartsController < ApplicationController
   	product = Product.find(params[:id]) 
   	redirect_to :back, notice: "#{product.name.capitalize} został poprawnie dodany do koszyka"
   end
+
+  def show
+  end
 end
