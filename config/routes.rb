@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
   resources :products
   resource :cart, only: [:show] do
     post 'add', path: 'add/:id', on: :member
