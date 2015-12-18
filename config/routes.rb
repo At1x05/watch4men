@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'static_page/home_page'
+
+  get 'static_page/contact'
+
+  resources :pages
   get 'user/new'
 
   resources :products
@@ -6,7 +11,7 @@ Rails.application.routes.draw do
     post 'add', path: 'add/:id', on: :member
   end
 
-  root 'products#index' 
+  root 'pages#index' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
