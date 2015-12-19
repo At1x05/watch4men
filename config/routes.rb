@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#show' 
 
   resources :pages
+  resources :users
 
   get 'user/new'
 

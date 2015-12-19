@@ -1,0 +1,27 @@
+%h1 Lista Klientów
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Imię i Nazwisko
+      %th Adres
+      %th Numer Telefonu
+      %th Napisz E-mail
+
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= link_to user.name, user
+        %td= "#{user.address}, #{user.postal_code} #{user.city} "
+        %td= user.phone
+        %td= mail_to user.email
+        %td
+          = link_to 'Edytuj', edit_user_path(user)
+          = link_to 'Usuń', user, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }
+
+%br
+
+%p= link_to 'Dodaj Użytkownika', new_user_path, class: 'btn btn-product'
+
+
