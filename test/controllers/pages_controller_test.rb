@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
-  setup do
+  def setup 
     @page = pages(:one)
   end
 
@@ -18,9 +18,8 @@ class PagesControllerTest < ActionController::TestCase
 
   test "should create page" do
     assert_difference('Page.count') do
-      post :create, page: { content: @page.content, description: @page.description, short_content_text: @page.short_content_text, tags: @page.tags, title: @page.title }
+      post :create, page: { content: 'testowy content', description: 'Testowy description', short_content_text: 'page.short_content_text', tags: 'page.tags', title: '@page.title' }
     end
-
     assert_redirected_to page_path(assigns(:page))
   end
 

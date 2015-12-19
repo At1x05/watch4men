@@ -1,0 +1,37 @@
+<h1> Edytuj Stronę Główną! </h1>
+
+<%= form_for :static_page, url: static_page_path(@static_page), method: :patch do |s_page| %>
+  <p>
+	<%= s_page.label :Nagłówek %> <br>
+	<%= s_page.text_field :header %>
+  </p>
+
+   <p>
+	<%= s_page.label :'Mniejszy nagłówek' %> <br>
+	<%= s_page.text_field :sub_header %>
+  </p>
+
+   <p>
+	<%= s_page.label :'Opis na pasku' %> <br>
+	<%= s_page.text_field :short_description %>
+  </p>
+
+   <p>
+	<%= s_page.label :'Box 1' %> <br>
+	<%= s_page.text_field :box_one %>
+  </p>
+
+   <p>
+	<%= s_page.label :'Box 2' %> <br>
+	<%= s_page.text_field :box_two %>
+  </p>
+
+   <p>
+	<%= s_page.label :'Przycisk' %> <br>
+	<%= s_page.text_field :cto_button %>
+  </p>
+
+  <p>
+    <%= s_page.submit("Edytuj Stronę Główną", class: 'btn btn-success')  %>
+  </p>
+<% end %>

@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
-  get 'static_page/home_page'
-
-  get 'static_page/contact'
+  root 'static_pages#show' 
 
   resources :pages
+
   get 'user/new'
 
   resources :products
+
   resource :cart, only: [:show] do
     post 'add', path: 'add/:id', on: :member
   end
 
-  root 'pages#index' 
-  # The priority is based upon order of creation: first created -> highest priority.
+  resources :static_pages
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

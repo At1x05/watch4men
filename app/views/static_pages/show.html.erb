@@ -1,0 +1,73 @@
+<header class="jumbotron text-center">
+
+            <h2 class="text-center "> <%= @static_page.header %> </h2>
+            <p><%= @static_page.sub_header %> </p>
+            <div id="myCarousel" class="cagit brarousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <%= link_to image_tag("slider_watch1_.jpg", alt: "Stylowy męski zegarek"), products_path %>
+                    </div>
+
+                    <div class="item">
+                     <%= link_to image_tag("slider_watch2_.jpg", alt: "Stylowy męski zegarek"), products_path %>
+                    </div>
+
+                    <div class="item">
+                    <%= link_to image_tag("slider_watch3_.jpg", alt: "Zegarek męski włoski"), products_path %>
+                    </div>
+                  </div>
+
+                  
+            </div>
+
+           
+        </header>
+      </div> <!-- end container 1st container-->
+
+        <div id="belt" class="container-fluid text-center content-full-width">
+          <%= @static_page.short_description %>
+        </div>
+
+        <div id="boxes_bg" class="container content-full-width">
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <div class='content-boxes text-center'>
+                <p><%= @static_page.box_one %></p>
+                <br>
+
+
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+               <div class='content-boxes text-center'>
+                 <p> <%= @static_page.box_two %> </p>
+                </div>
+
+
+            </div>
+
+          </div>
+          <br>
+         
+        </div>
+
+         <div class='container-fluid text-center'>
+            <%= link_to @static_page.cto_button, products_path, class:'text-center btn-big-lg'  %> 
+          </p>
+         </div>
+         <footer class="container-fluid text-center content-full-width">
+            
+         </footer>
+        
+
+
+ 

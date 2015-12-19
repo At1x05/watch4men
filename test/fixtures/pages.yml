@@ -8,8 +8,16 @@ one:
   description: MyText
 
 two:
-  title: MyString
-  content: MyText
-  short_content_text: MyString
-  tags: MyText
-  description: MyText
+  title: MyStringTwo
+  content: MyTextTwo
+  short_content_text: MyStringTwo
+  tags: MyTextTwo
+  description: MyTextTwo
+  
+three:
+  title: MyStringTwoTh
+  content: MyTextTwoTH
+  short_content_text: MyStringTwoTh
+  tags: MyTextTwoTh
+  description: MyTextTwoth
+

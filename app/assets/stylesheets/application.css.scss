@@ -33,3 +33,59 @@ body{
 .thumb-image{
 	max-height: 80px;
 }
+
+body{
+	 font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+
+
+
+.content-full-width{
+  width: 100%;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 300; 
+  padding: 20px 50px 20px 50px;
+}
+
+.content-boxes{
+	color: #ffffff;
+	box-sizing: border-box;
+	width: 100%;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border-radius: 30px 30px 30px 30px;
+	background-color: #667467;
+	height: 400px;
+	padding: 30px 20px 30px 20px;
+
+
+
+}
+#belt{  
+  
+  background-color: #c43235;
+  color: white;
+
+}
+
+#boxes_bg{
+	background-color: #f0f0f0;
+
+}
+
+
+
+.btn-big-lg{
+	background-color: #06000a;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 15px 22px;
+	border-radius: 10px;
+
+}
+
+#btn-shopping{
+	background-color: #c43235;
+}
