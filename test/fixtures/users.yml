@@ -7,11 +7,17 @@ one:
   phone: MyString
   postal_code: MyString
   city: MyString
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 two:
   name: MyStringTwo
-  email: MyStringTwo
+  email: MyStringTwo@wp.pl
   address: MyStringTwo
   phone: MyStringTwo
   postal_code: MyStringTwo
   city: MyStringTwo
+  admin: false
+  activated: true
+  activated_at: <%= Time.zone.now %>

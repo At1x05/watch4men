@@ -23,9 +23,9 @@ class UsersController < ApplicationController
   def create
     @user= User.new(user_params)
       if @user.save
-        log_in @user
-        flash[:success] = "Witamy w sklepie Watch4Men! Życzymy udanych zakupów!"
-        redirect_to @user
+        @user.send_activation_email
+        flash.now[:info] = "Sprawdź swoją skrzynkę E-mail w celu aktywacji Twojego konta."
+        redirect_to root_url
       else
         render 'new'
       end
@@ -70,4 +70,5 @@ class UsersController < ApplicationController
     def admin_rights
       redirect_to(root_url) unless current_user.admin?
     end
+
 end

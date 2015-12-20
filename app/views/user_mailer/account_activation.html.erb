@@ -1,0 +1,11 @@
+<h1>Watch4Men.pl</h1>
+
+<p>Cześć <%= @user.name %>,</p>
+
+<p>
+Chcielbyśmy Cię serdecznie powitać w naszym sklepie Watch4Men.pl! <br>
+Kliknij w poniższy link, by aktywować konto:
+</p>
+
+<%= link_to "Aktywuj konto", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

@@ -1,0 +1,6 @@
+Cześć <%= @user.name %>!
+
+Chcielbyśmy Cię serdecznie powitać w naszym sklepie Watch4Men.pl! <br>
+Kliknij w poniższy link, by aktywować konto:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
