@@ -18,7 +18,8 @@
         %td= mail_to user.email
         %td
           = link_to 'Edytuj', edit_user_path(user)
-          = link_to 'Usuń', user, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }
+          -if current_user.admin? && !current_user?(user)
+            = link_to 'Usuń', user, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }
 
 %br
 
