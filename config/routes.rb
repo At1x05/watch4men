@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
   root 'static_pages#show' 
 
+  get 'login' => 'sessions#new'
+  post   'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  get 'rejestracja' => 'users#new'
+  
   resources :pages
   resources :users
-
-  get 'user/new'
-
+  
   resources :products
-
   resource :cart, only: [:show] do
     post 'add', path: 'add/:id', on: :member
   end
-
   resources :static_pages
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
