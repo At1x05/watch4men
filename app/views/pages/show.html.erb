@@ -1,0 +1,25 @@
+<div class="row pages-bg pages-head">
+  <div class="col-md-7 ">
+    <h1 class="text-center"><%= @page.title %></h1>
+    <br>
+
+    <p><%= @page.content %> </p>
+
+    <p class="pages-quote"> <%= @page.description %> </p>
+
+    <p><%= @page.content_three%> </p>
+  </div>
+
+  <div class="col-md-5"> 
+    <p class="pages-img text-center"><%= image_tag(@page.photo,  alt: "Success!", width: '450px') %></p>
+    <br>
+	<%= @page.content_two %>
+
+  </div>  
+</div>
+<br>
+<div id="belt" class="row">
+	<div class="col-md-12">
+	  <p class="text-center"><%= @page.short_content_text %></p>
+	</div>
+</div>

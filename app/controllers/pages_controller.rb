@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-
+    @pages = Page.all
   end
 
   def home_page
@@ -74,6 +74,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:title, :content, :short_content_text, :tags, :description)
+      params.require(:page).permit(:title, :content, :short_content_text, :tags, :description, :photo, :content_two, :content_three)
     end
 end

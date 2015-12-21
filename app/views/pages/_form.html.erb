@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@page) do |f| %>
+      <%= f.label :'Tytuł:' %>
+      <%= f.text_field :title, class: 'form-control', height: '300px' %>
+
+      <%= f.label :'Zawartość:' %>
+      <%= f.text_area :content, class: 'form-control' %>
+
+      <%= f.label :'Zawartość #2:' %>
+      <%= f.text_area :content_two, class: 'form-control' %>
+
+      <%= f.label :'Zawartość #3:' %>
+      <%= f.text_area :content_three, class: 'form-control' %>
+
+      <%= f.label :'Opis na pasku:' %>
+      <%= f.text_area :short_content_text, class: 'form-control' %>
+
+      <%= f.label :'Opis w polu:' %>
+      <%= f.text_area :description, class: 'form-control' %>
+
+      <%= f.label :'Zdjęcie:' %>
+      <%= f.text_area :photo, class: 'form-control' %>
+      
+      <br>
+      
+      <%= f.submit "Zapisz!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
