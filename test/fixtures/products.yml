@@ -5,6 +5,7 @@ one:
   price: 1.5
   image: MyString
   description: 'Lorem ipsum'
+  long_description: 'xaxaxa'
   mark: 1
 
 two:
@@ -12,4 +13,5 @@ two:
   price: 2
   image: MyString
   description: 'Testowy'
+  long_description: 'heheheh'
   mark: 1

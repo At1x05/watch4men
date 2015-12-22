@@ -17,8 +17,8 @@ class CartTest < MiniTest::Test
   end
 
   def test_retrieve_products
-    product = Product.create! name: 'Apple Smartwatch', price: 2000, description: 'Lorem ipsum'
-    cart = Cart.new
+    cart= Cart.new
+    product = Product.create! name: 'Apple Smartwatch', price: 2000, description: 'Lorem ipsum', long_description: 'lorem iiipsum', mark: 5
     cart.add_item product.id
 
     assert_kind_of Product, cart.items.first.find_product 

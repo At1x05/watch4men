@@ -22,6 +22,8 @@ class StaticPagesController < ApplicationController
 	  @static_page = StaticPage.new(static_page_params)
 	  @static_page.save
 	  redirect_to @static_page
+
+	  
 	end
 
 	def update

@@ -1,0 +1,31 @@
+<div class='row'>
+	<div class='col-md-12 products-belt'>
+		<h1 class='text-center'><%= @product.name %></h1>
+	</div>
+	<br>
+
+	<div class='row' style='background-color: #eeeeee;'>
+		<div class='col-md-7 text-center products-big-img'>
+			<%= image_tag(@product.image, width: '600px' ) %>
+		</div>
+
+		<div class='col-md-4 col-md-offset-1'>
+
+			<h2> <%= number_to_currency @product.price %> </h2>
+			<%= link_to "Dodaj do Koszyka", add_cart_path, method: :post, class:'btn btn-md btn-product' %>
+			<br>
+			<p>	Średnia ocena produktu to: <strong> <%= @product.mark %> /10 </strong> </p>
+			<p> <%= @product.description %>
+		</div>
+
+		
+	</div>
+
+	<div class='row products-long-description'>
+		<div class='col-md-1 col-md-offset-1'> </div>
+		<div class='col-md-8'> 
+			<%= @product.long_description %>
+		</div>
+		<div class='col-md-1 col-md-offset-1'> </div>
+	</div>
+</div>

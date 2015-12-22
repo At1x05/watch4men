@@ -1,0 +1,39 @@
+<div class="row">
+ <div class="col-sm-6 col-sm-offset-1">
+    <%= form_for(@product) do |f| %>
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2>W formularzu znajdują się następujące błędy:</h2>
+
+          <ul>
+          <% @product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <%= f.label :'Produkt:' %>
+      <%= f.text_field :name, class: 'form-control', height: '300px' %>
+
+      <%= f.label :'Cena:' %>
+      <%= f.text_area :price, class: 'form-control' %>
+
+      <%= f.label :'Dodaj Zdjęcie:' %>
+      <%= f.file_field :image, class: 'form-control' %>
+
+      <%= f.label :'Krótki Opis:' %>
+      <%= f.text_area :description, class: 'form-control' %>
+
+      <%= f.label :'Pełny Opis:' %>
+      <%= f.text_area :long_description, class: 'form-control' %>
+
+      <%= f.label :'Ocena:' %>
+      <%= f.number_field :mark, class: 'form-control' %>
+
+       <br>
+      
+      <%= f.submit "Zapisz!", class: "btn btn-primary" %>
+    <% end %>
+</div>

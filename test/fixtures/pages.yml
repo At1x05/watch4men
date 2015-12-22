@@ -3,6 +3,8 @@
 one:
   title: MyString
   content: MyText
+  content_two: 'MyTrolo'
+  content_three: 'Content Three'
   short_content_text: MyString
   tags: MyText
   description: MyText
@@ -10,6 +12,8 @@ one:
 two:
   title: MyStringTwo
   content: MyTextTwo
+  content_two: 'MyTrolo'
+  content_three: 'Content Three'
   short_content_text: MyStringTwo
   tags: MyTextTwo
   description: MyTextTwo
@@ -17,6 +21,8 @@ two:
 three:
   title: MyStringTwoTh
   content: MyTextTwoTH
+  content_two: 'MyTrolo'
+  content_three: 'Content Three'
   short_content_text: MyStringTwoTh
   tags: MyTextTwoTh
   description: MyTextTwoth

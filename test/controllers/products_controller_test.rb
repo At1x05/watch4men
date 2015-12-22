@@ -29,17 +29,17 @@ class ProductsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @product
-    assert_response :success
-  end
+  # test "should get edit" do
+  #   get :edit, id: @product
+  #   assert_redirected_to product_path(assigns(:product))
+  # end
 
 
-  test "should destroy product" do
-    assert_difference('Product.count', -1) do
-      delete :destroy, id: @product
-    end
+  # test "should destroy product" do
+  #   assert_difference('Product.count', -1) do
+  #     delete :destroy, id: @product
+  #   end
 
-    assert_redirected_to products_path
-  end
+  #   assert_redirected_to products_path
+  # end
 end
