@@ -1,3 +1,4 @@
+
 module SessionsHelper
 
   # Logs in the given user.
@@ -6,8 +7,8 @@ module SessionsHelper
   end
 
   def log_out
-  	session.delete(:user_id)
-  	@current_user = nil
+    session.delete(:user_id)
+    @current_user = nil
   end
 
   # Returns the current logged-in user (if any).
@@ -30,7 +31,7 @@ module SessionsHelper
   end
 
   def current_user?(user)
-  	user == current_user
+    user == current_user
   end
 
 end

@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :initialize_cart
+  before_action :admin_user, only: [:edit, :add, :update, :destroy]
 
   
   def index
@@ -26,7 +27,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Produkt został pomyślnie dodany.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -39,7 +40,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to @product, notice: 'Produkt został zaktualizowany' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -52,7 +53,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+      format.html { redirect_to products_url, notice: 'Produkt został usunięty.' }
       format.json { head :no_content }
     end
   end
@@ -67,4 +68,9 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :price, :image, :description, :mark)
     end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.try(:admin?)
+    end
+
 end

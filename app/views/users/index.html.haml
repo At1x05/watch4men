@@ -17,9 +17,9 @@
         %td= user.phone
         %td= mail_to user.email
         %td
-          = link_to 'Edytuj', edit_user_path(user)
-          -if current_user.admin? && !current_user?(user)
+          -if current_user.try(:admin?) && !current_user?(user)
             = link_to 'Usuń', user, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }
+            = link_to 'Edytuj', edit_user_path(user)
 
 %br
 

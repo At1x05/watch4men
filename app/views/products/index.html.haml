@@ -1,5 +1,7 @@
 %h1 Wszystkie produkty
-
+-if current_user.try(:admin?)
+  %p= link_to 'Dodaj Produkt', new_product_path, class: 'btn btn-product'
+%br
 %table.table.table-hover
   %thead
     %tr
@@ -17,9 +19,10 @@
         %td= image_tag product.image, class: 'min-image'
         %td= product.description
         %td
-          = link_to 'Edytuj', edit_product_path(product)
-          = link_to 'Usuń', product, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }
+        -if current_user.try(:admin?)
+          %td
+            = link_to 'Edytuj', edit_product_path(product), class: 'btn btn-info'
+            = link_to 'Usuń', product, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }, class: 'btn btn-info'
 
 %br
 
-%p= link_to 'Dodaj Produkt', new_product_path, class: 'btn btn-product'

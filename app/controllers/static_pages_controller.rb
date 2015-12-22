@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	before_action :admin_user, only:[:edit, :update, :index, :destroy, :add]
 
 	def index
 		@static_pages= StaticPage.all
@@ -17,6 +18,7 @@ class StaticPagesController < ApplicationController
 	end
 
 	def create
+	  	
 	  @static_page = StaticPage.new(static_page_params)
 	  @static_page.save
 	  redirect_to @static_page
@@ -43,4 +45,8 @@ class StaticPagesController < ApplicationController
 	  def static_page_params
         params.require(:static_page).permit(:header, :sub_header, :short_description, :box_one, :box_two, :cto_button)
       end
+
+     def admin_user
+      redirect_to(root_url) unless current_user.try(:admin?)
+    end
 end

@@ -4,6 +4,6 @@
 %p Średnia ocena to #{@product.mark}/10
 
 %p=link_to "Dodaj do Koszyka", add_cart_path, method: :post, class:'btn btn-product'
-= link_to 'Edit', edit_product_path(@product)
+= link_to 'Edytuj', edit_product_path(@product), class: 'btn btn-primary'
 \|
-= link_to 'Back', products_path
+= link_to 'Cofnij', products_path
