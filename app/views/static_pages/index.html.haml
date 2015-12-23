@@ -1,4 +1,4 @@
-%h1 Wszystkie strony główne
+%h1 Zarządzaj stroną główną
 
 %table.table.table-hover
   %thead
@@ -6,8 +6,6 @@
       %th Nagłówek
       %th Mniejszy Nagłówek
       %th Opis na pasku
-      %th Box 1
-      %th Box 2
       %th Przycisk
 
 
@@ -17,10 +15,8 @@
         %td= link_to s_page.header, s_page
         %td= s_page.sub_header
         %td= s_page.short_description
-        %td= s_page.box_one
-        %td= s_page.box_two
         %td= s_page.cto_button
-        %td=  link_to 'Edytuj', edit_static_page_path(s_page)
+        %td=  link_to 'Edytuj', edit_static_page_path(s_page), class: 'btn btn-info'
         
 %br
 

@@ -37,7 +37,10 @@
           </li>
         <% else %>
           <li><%= link_to "Zaloguj się", login_path %></li>
-        <% end %>
+       <% end %>
+       <% if current_user.try(:admin?) %>
+            <li> <%= link_to "Panel Administracyjny", panel_administracyjny_path, style:'color: #eeeeee;' %> </li>
+      <% end %>
         <li>  <%= render 'cart' %> </li>
         
       </ul>

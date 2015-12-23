@@ -1,0 +1,39 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th.text-center Zarządzaj:
+      %th.text-center Akcja
+      
+
+    %tr
+      %td.text-center 
+        =link_to "Zarządzaj stronami statycznymi", pages_path
+      %td.text-center
+        =link_to 'Dodaj', new_page_path, class: 'btn btn-primary'
+        =link_to "Usuń", pages_path, class: 'btn btn-danger'
+        =link_to 'Edytuj', pages_path, class: 'btn btn-info'
+
+    %tr
+      %td.text-center 
+        =link_to "Zarządzaj stroną główną", static_pages_path(1)
+      %td.text-center
+        =link_to "Pokaż", root_path, class: 'btn btn-primary'
+        =link_to 'Edytuj', '/static_pages/1/edit', class: 'btn btn-info'
+        
+    %tr
+      %td.text-center 
+        =link_to "Zarządzaj produktami", products_path
+      %td.text-center
+        =link_to 'Dodaj', new_product_path, class: 'btn btn-primary'
+        =link_to "Usuń", products_path, class: 'btn btn-danger'
+        =link_to 'Edytuj', products_path, class: 'btn btn-info'
+        
+    %tr
+      %td.text-center 
+        =link_to "Zarządzaj klientami", users_path
+      %td.text-center
+        =link_to 'Dodaj', new_user_path, class: 'btn btn-primary'
+        =link_to "Usuń", users_path, class: 'btn btn-danger'
+        =link_to 'Edytuj', users_path, class: 'btn btn-info'            
+
+    

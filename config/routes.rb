@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   get 'password_resets/new'
   get 'password_resets/edit'
+  get 'panel_administracyjny' => 'admin_pages#show'
   
 
   get 'login' => 'sessions#new'

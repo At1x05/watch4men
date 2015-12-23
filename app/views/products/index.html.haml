@@ -21,8 +21,11 @@
         %td
         -if current_user.try(:admin?)
           %td
+            = link_to 'Dodaj do koszyka', add_cart_path(product), method: :post, class:'btn btn-md btn-product'
+            %br 
+            %br
             = link_to 'Edytuj', edit_product_path(product), class: 'btn btn-info'
-            = link_to 'Usuń', product, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }, class: 'btn btn-info'
+            = link_to 'Usuń', product, :method => :delete, :data => { :confirm => 'Jesteś pewien?' }, class: 'btn btn-danger'
 
 %br
 
