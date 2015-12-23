@@ -19,7 +19,6 @@
         <li><%= link_to "Produkty", products_path %></li>
         <li><%= link_to "O Firmie", page_path(1) %> </li>
         <li><%= link_to "Informacje", page_path(2) %> </li>
-        <li><%= link_to "Rejestracja", rejestracja_path%></li>
         <li><%= link_to "Kontakt", page_path(3) %> </li>
         <% if logged_in? %>
           <li class="dropdown">
@@ -36,7 +35,8 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Zaloguj się", login_path %></li>
+          <li><%= link_to "Zaloguj się", login_path, style:'color: #eeeeee;' %></li>
+          <li><%= link_to "Rejestracja", rejestracja_path, style:'color: #eeeeee;' %></li>
        <% end %>
        <% if current_user.try(:admin?) %>
             <li> <%= link_to "Panel Administracyjny", panel_administracyjny_path, style:'color: #eeeeee;' %> </li>

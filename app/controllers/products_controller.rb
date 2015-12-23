@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :initialize_cart
-  before_action :admin_user, only: [:edit, :add, :update, :destroy]
+  before_action :admin_user, only: [:edit, :add, :update, :destroy, :new]
 
   
   def index
