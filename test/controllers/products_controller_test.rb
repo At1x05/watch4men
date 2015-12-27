@@ -11,10 +11,10 @@ class ProductsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:products)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
+  #test "should get new" do
+   # get :new
+    #assert_response :success
+  #end
 
   #test "should create product" do
    # assert_difference('Product.count') do

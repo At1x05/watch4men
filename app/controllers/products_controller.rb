@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :happy_hours]
   before_action :initialize_cart
   before_action :admin_user, only: [:edit, :add, :update, :destroy, :new]
 
@@ -73,4 +73,12 @@ class ProductsController < ApplicationController
       redirect_to(root_url) unless current_user.try(:admin?)
     end
 
+    def happy_hours
+      t = Time.now.hour
+      if t > 20 && t <24
+        @product.price = @product.price * 0.8
+      end
+    end
+
+    
 end

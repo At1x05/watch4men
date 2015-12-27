@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :index]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:show]
   before_action :admin_rights, only: [:destroy, :index]
+  before_action :cuar, only: [:edit, :show]
 
 
 
@@ -70,6 +71,14 @@ class UsersController < ApplicationController
 
     def admin_rights
       redirect_to(root_url) unless current_user.try(:admin?)
+    end
+
+    def cuar
+      if current_user.try(:admin?)
+        admin_rights
+      else
+        correct_user
+      end
     end
 
 end
