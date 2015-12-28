@@ -14,8 +14,12 @@
 			<h2> <%= number_to_currency @product.price %> </h2>
 			<%= link_to "Dodaj do Koszyka", add_cart_path, method: :post, class:'btn btn-md btn-product' %>
 			<br>
-			<p>	Średnia ocena produktu to: <strong> <%= @product.mark %> /10 </strong> </p>
-			<p> <%= @product.description %>
+			
+			
+			<p> <%= @product.description %> </p>
+
+			<button class='show_btn btn btn-info'>Pokaż ocenę</button><br>
+			<div class='show_mark'><p>Średnia ocena produktu to: <strong> <%= @product.mark %> /10 </strong></p></div>
 		</div>
 
 		

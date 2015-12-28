@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+
+$(document).ready(function(){
+    $("button.show_btn").click(function(){
+        $("div.show_mark").toggle();
+    });
+});
