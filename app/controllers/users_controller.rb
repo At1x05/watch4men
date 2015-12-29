@@ -4,8 +4,6 @@ class UsersController < ApplicationController
   before_action :admin_rights, only: [:destroy, :index]
   before_action :cuar, only: [:edit, :show]
 
-
-
   def index
     @users = User.all
   end

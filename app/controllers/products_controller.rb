@@ -10,6 +10,10 @@ class ProductsController < ApplicationController
 
 
   def show
+     @product= Product.find(params[:id]) 
+    if Time.now.hour > 7 && Time.now.hour <9
+      @product.price = @product.price * 0.5
+    end
   end
 
  
@@ -73,12 +77,6 @@ class ProductsController < ApplicationController
       redirect_to(root_url) unless current_user.try(:admin?)
     end
 
-    def happy_hours
-      t = Time.now.hour
-      if t > 20 && t <24
-        @product.price = @product.price * 0.8
-      end
-    end
 
     
 end

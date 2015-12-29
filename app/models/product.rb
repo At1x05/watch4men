@@ -5,4 +5,8 @@ class Product < ActiveRecord::Base
 	validates :price, presence: {message: "Cena produktu nie może byc pusta"}
 	validates :name, presence:{ message: "Długi opis produktu nie może byc pusty"}
 	validates :mark, numericality: {only_integer: true, greater_than: 0, less_than_or_equal_to: 10, message: "Ocena musi znajdować się w przedziale od 1 do 10."}
+
+	
 end
+
+
